@@ -10,11 +10,11 @@ const dotenv = configDotenv().parsed;
 const db = knex({
   client: "pg",
   connection: {
-    host: dotenv.DB_HOST,
+    host: process.env.DB_HOST,
     port: 5432,
-    user: dotenv.DB_USERNAME,
-    password: dotenv.DB_PASSWORD,
-    database: dotenv.DB_NAME,
+    user: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
   },
 });
 
